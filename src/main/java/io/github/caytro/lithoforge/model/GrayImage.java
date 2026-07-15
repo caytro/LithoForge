@@ -73,7 +73,7 @@ public class GrayImage {
         for (int row = 0; row < h; row++) {
             for (int col = 0; col < w; col++) {
                 if ((pixels[row][col] > 255) || (pixels[row][col] < 0)) {
-                    throw new IllegalArgumentException("pixels[" + row + "][" + col + "] must be in interval [0 255]");
+                    throw new IllegalArgumentException("pixels[" + row + "][" + col + "] must be in interval [0 255]. Found " + pixels[row][col]);
                 }
             }
         }
