@@ -11,6 +11,7 @@ public final class PngImageLoader {
     }
 
     private static int grayLevel(int rgb) {
+
         int red =  ( rgb >>> 16 ) & 0xFF ;
         int green = ( rgb >>> 8 ) & 0xFF ;
         int blue = rgb & 0xFF ;

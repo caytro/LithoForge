@@ -257,3 +257,40 @@ L'objectif est de construire progressivement une API simple et robuste.
 * Une copie défensive est indispensable lorsqu'un objet immuable reçoit un objet mutable.
 * Une bonne API cherche à rendre les états invalides impossibles à représenter.
 * Les tests décrivent le comportement attendu avant l'implémentation.
+
+
+## 10. Les classes utilitaires
+
+Lorsqu'une classe :
+
+- ne possède aucun état ;
+- n'est composée que de méthodes `static` ;
+
+elle peut être transformée en classe utilitaire.
+
+Exemple :
+
+```java
+public final class PngImageLoader {
+
+    private PngImageLoader() {
+    }
+
+    public static GrayImage load(Path path)
+            throws IOException {
+        ...
+    }
+
+}
+
+## 11. Les méthodes privées
+
+Une méthode privée peut exister uniquement pour donner un nom à une idée.
+
+Exemple :
+
+```java
+grayLevel(image.getRGB(column, row))
+
+
+
